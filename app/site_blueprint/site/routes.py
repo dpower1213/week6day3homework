@@ -15,7 +15,7 @@ def pokemon():
     if request.method == 'POST' and form.validate_on_submit():
         #contact the api and get the info for the pokemon from the form
         
-        if len(current_user.pokemen.all()) > 20:
+        if len(current_user.pokemen.all()) > 4:
             flash('You have too many pokemon, dont be greedy')
         else:
             name = request.form.get('name')
